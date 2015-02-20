@@ -1,0 +1,32 @@
+Index: pyfa-1.5.1/config.py
+===================================================================
+--- pyfa-1.5.1.orig/config.py	2014-10-30 16:01:44.150697113 -0500
++++ pyfa-1.5.1/config.py	2014-10-30 16:01:44.138697112 -0500
+@@ -23,7 +23,7 @@
+ # Increment every time we need to flag for user database upgrade/modification
+ dbversion = 1
+ 
+-pyfaPath = None
++pyfaPath = '/usr/share/pyfa'
+ savePath = None
+ staticPath = None
+ saveDB = None
+Index: pyfa-1.5.1/pyfa.py
+===================================================================
+--- pyfa-1.5.1.orig/pyfa.py	2014-10-30 16:01:44.150697113 -0500
++++ pyfa-1.5.1/pyfa.py	2014-10-30 16:01:44.138697112 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#! /usr/bin/python
+ #===============================================================================
+ # Copyright (C) 2010 Diego Duclos
+ #
+@@ -21,6 +21,8 @@
+ import sys
+ import re
+ 
++sys.path.append('/usr/share/pyfa')
++
+ if not hasattr(sys, 'frozen'):
+ 
+     if sys.version_info < (2,6) or sys.version_info > (3,0):

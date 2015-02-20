@@ -1,0 +1,7 @@
+eos		usr/share/pyfa
+gui		usr/share/pyfa
+icons		usr/share/pyfa
+service		usr/share/pyfa
+staticdata	usr/share/pyfa
+pyfa.py		usr/bin
+config.py	usr/share/pyfa
