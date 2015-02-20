@@ -1,20 +1,20 @@
-Index: pyfa-1.5.1/config.py
+Index: Pyfa/config.py
 ===================================================================
---- pyfa-1.5.1.orig/config.py	2014-10-30 16:01:44.150697113 -0500
-+++ pyfa-1.5.1/config.py	2014-10-30 16:01:44.138697112 -0500
+--- Pyfa.orig/config.py	2015-02-20 15:15:47.578904539 -0600
++++ Pyfa/config.py	2015-02-20 15:16:24.070903552 -0600
 @@ -23,7 +23,7 @@
  # Increment every time we need to flag for user database upgrade/modification
- dbversion = 1
+ dbversion = 5
  
 -pyfaPath = None
-+pyfaPath = '/usr/share/pyfa'
++pyfaPath = "/usr/share/pyfa"
  savePath = None
  staticPath = None
  saveDB = None
-Index: pyfa-1.5.1/pyfa.py
+Index: Pyfa/pyfa.py
 ===================================================================
---- pyfa-1.5.1.orig/pyfa.py	2014-10-30 16:01:44.150697113 -0500
-+++ pyfa-1.5.1/pyfa.py	2014-10-30 16:01:44.138697112 -0500
+--- Pyfa.orig/pyfa.py	2015-02-20 15:15:47.578904539 -0600
++++ Pyfa/pyfa.py	2015-02-20 15:15:47.574904540 -0600
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#! /usr/bin/python
