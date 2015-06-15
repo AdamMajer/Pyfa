@@ -295,7 +295,7 @@ class Fit(object):
     @validates("ID", "ownerID", "shipID")
     def validator(self, key, val):
         map = {"ID": lambda val: isinstance(val, int),
-               "ownerID" : lambda val: isinstance(val, int),
+               "ownerID" : lambda val: isinstance(val, int) or val is None,
                "shipID" : lambda val: isinstance(val, int) or val is None}
 
         if map[key](val) == False: raise ValueError(str(val) + " is not a valid value for " + key)
@@ -737,7 +737,7 @@ class Fit(object):
         capAdded = 0
         for mod in self.modules:
             if mod.state >= State.ACTIVE:
-                if mod.getModifiedItemAttr("capacitorNeed") != 0:
+                if (mod.getModifiedItemAttr("capacitorNeed") or 0) != 0:
                     cycleTime = mod.rawCycleTime or 0
                     reactivationTime = mod.getModifiedItemAttr("moduleReactivationDelay") or 0
                     fullCycleTime = cycleTime + reactivationTime

@@ -246,10 +246,14 @@ class DmgPatternEditorDlg(wx.Dialog):
 
     def newPattern(self, event):
         self.restrict()
+
+        self.block = True
         # reset values
         for type in self.DAMAGE_TYPES:
             editObj = getattr(self, "%sEdit"%type)
             editObj.SetValue(0)
+
+        self.block = False
 
         self.btnSave.SetLabel("Create")
         self.Refresh()
@@ -289,7 +293,7 @@ class DmgPatternEditorDlg(wx.Dialog):
             return
 
         sDP = service.DamagePattern.getInstance()
-        if event.EventObject.Label == "Create":
+        if self.btnSave.Label == "Create":
             p = sDP.newPattern()
         else:
             # we are renaming, so get the current selection
