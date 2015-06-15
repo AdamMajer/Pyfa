@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#! /usr/bin/python
 #===============================================================================
 # Copyright (C) 2010 Diego Duclos
 #
@@ -20,6 +20,8 @@
 
 import sys
 import re
+
+sys.path.append('/usr/share/pyfa')
 
 if not hasattr(sys, 'frozen'):
 

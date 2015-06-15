@@ -23,7 +23,7 @@ evemonMinVersion = "4081"
 # Increment every time we need to flag for user database upgrade/modification
 dbversion = 7
 
-pyfaPath = None
+pyfaPath = "/usr/share/pyfa"
 savePath = None
 staticPath = None
 saveDB = None
