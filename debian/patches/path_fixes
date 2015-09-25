@@ -1,0 +1,32 @@
+Index: Pyfa/config.py
+===================================================================
+--- Pyfa.orig/config.py	2015-09-24 19:29:43.367218412 -0500
++++ Pyfa/config.py	2015-09-24 19:29:43.363218456 -0500
+@@ -29,7 +29,7 @@
+ expansionVersion = "1.2"
+ evemonMinVersion = "4081"
+ 
+-pyfaPath = None
++pyfaPath = "/usr/share/pyfa"
+ savePath = None
+ staticPath = None
+ saveDB = None
+Index: Pyfa/pyfa.py
+===================================================================
+--- Pyfa.orig/pyfa.py	2015-09-24 19:29:43.367218412 -0500
++++ Pyfa/pyfa.py	2015-09-24 19:29:43.363218456 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#! /usr/bin/python
+ #===============================================================================
+ # Copyright (C) 2010 Diego Duclos
+ #
+@@ -21,6 +21,8 @@
+ import sys
+ import re
+ 
++sys.path.append('/usr/share/pyfa')
++
+ if not hasattr(sys, 'frozen'):
+ 
+     if sys.version_info < (2,6) or sys.version_info > (3,0):
