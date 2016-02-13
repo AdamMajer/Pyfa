@@ -1,6 +1,7 @@
 pyfa (1.19.1-1) private; urgency=medium
 
   * New upstream release
+  * Refresh patches
 
  -- Adam Majer <adamm@zombino.com>  Fri, 12 Feb 2016 21:43:14 -0600
 
