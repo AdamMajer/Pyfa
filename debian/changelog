@@ -2,6 +2,7 @@ pyfa (1.20.1-1) UNRELEASED; urgency=medium
 
   * New upstream release
   * Refresh patches
+  * Update standards to 3.9.7. No changes.
 
  -- Adam Majer <adamm@zombino.com>  Wed, 16 Mar 2016 00:40:58 -0500
 
